@@ -1,15 +1,16 @@
-import './header.css';
+import { Container } from '@mui/material';
+import styles from './header.module.css';
 
 function Header() {
   return (
-    <div>
-      <div className='Header'>
+    <Container className={styles.headerContainer} disableGutters>
+      <div className={styles.headerText}>
         We boost brands with creativity and digital solutions
       </div>
       <div>
         See our work
       </div>
-    </div>
+    </Container>
   );
 }
 
