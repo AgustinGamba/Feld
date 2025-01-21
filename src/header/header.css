@@ -1,0 +1,8 @@
+.Header {
+  text-align: center;
+}
+
+.Header-logo {
+height: 40vmin;
+pointer-events: none;
+}
