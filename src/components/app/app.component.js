@@ -6,11 +6,9 @@ import Header from '../header/header.component';
 import OurWork from '../our-work/ourWork.component';
 import Services from '../services/services.component';
 
-import styles from './app.module.css';
-
 function App() {
   return (
-    <Container className={styles.baseContainer} disableGutters>
+    <Container>
       <Header />
       <OurWork />
       <Services />
