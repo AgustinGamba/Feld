@@ -6,7 +6,6 @@ const theme = createTheme({
         MuiContainer: {
             defaultProps: {
                 disableGutters: true,
-                maxWidth: 100,
                 spacing: 8
             },
         },
