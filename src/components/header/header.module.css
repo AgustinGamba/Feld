@@ -1,6 +1,6 @@
 .headerContainer {
+  /* TODO: Check, vh doesn't adapt to content position */
   height: 40vh;
-  width: 100%;
   background-color: #f5f5f5;
 }
 
@@ -10,17 +10,11 @@
 }
 
 .headerBox {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
 }
 
 .headerTextBox {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
   width: 100%;
-  align-items: center;
 }
 
 .headerText {
