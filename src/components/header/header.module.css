@@ -5,10 +5,32 @@
 }
 
 .headerLogo {
-  height: 40vmin;
-  width: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+.headerBox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerTextBox {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
 .headerText {
-  text-align: center;
+  font-size: 60px;
+  /* TODO: Fix font family */
+  /* font-family: Manrope; */
+  /* Should I keep this? */
+  line-height: 80.25px;
+}
+
+.headerLink {
+  font-size: 20px;
 }
