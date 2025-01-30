@@ -1,0 +1,10 @@
+.ourWorkContainer {
+  /* TODO: Check, vh doesn't adapt to content position */
+  height: 60vh;
+  min-width: 100%;
+  background-color: #ffffff;
+}
+
+.ourWorkDot {
+  color: #0B56DB;
+}

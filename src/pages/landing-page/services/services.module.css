@@ -1,0 +1,21 @@
+.servicesContainer {
+  /* TODO: Check, vh doesn't adapt to content position */
+  height: 70vh;
+  min-width: 100%;
+  background-color: #E8E8E8;
+}
+
+.servicesDot {
+  color: #0B56DB;
+}
+
+.splashContainer {
+  background-image: url('../../../assets/splash.png');
+  /* Remove height */
+  /* height: 500px; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* Remove? */
+  position: relative;
+}
