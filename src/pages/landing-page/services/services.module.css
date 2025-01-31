@@ -11,11 +11,18 @@
 
 .splashContainer {
   background-image: url('../../../assets/splash.png');
-  /* Remove height */
-  /* height: 500px; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   /* Remove? */
   position: relative;
+}
+
+.servicesDescriptionText {
+  font-size: 16px;
+  color: #A0A0A0
+}
+
+.servicesLink {
+  font-size: 20px;
 }

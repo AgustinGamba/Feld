@@ -13,8 +13,13 @@ const theme = createTheme({
         },
     },
     typography: {
+        fontFamily: 'Manrope',
+        fontWeightLight: 400,
         h1: {
             fontSize: '64px',
+        },
+        h2: {
+            fontSize: '36px',
         }
     },
     breakpoints: {

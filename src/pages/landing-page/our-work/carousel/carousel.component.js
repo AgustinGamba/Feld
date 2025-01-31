@@ -75,7 +75,7 @@ const Carousel = () => {
               backgroundImage: `url(${slide})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              marginRight: 2,
+              marginRight: 1.5,
               borderRadius: 4,
             }}
           />
