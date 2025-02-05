@@ -19,6 +19,9 @@ const theme = createTheme({
             fontSize: '64px',
         },
         h2: {
+            fontSize: '55px',
+        },
+        h3: {
             fontSize: '36px',
         }
     },

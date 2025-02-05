@@ -20,14 +20,18 @@ function Services() {
                 </Typography>
               </Box>
               <Box display="flex" flexDirection="column" gap={10}>
-                <Typography variant="body1" className={styles.servicesDescriptionText}>
-                  We create digital solutions that inspire and grow with you. By blending creativity with tech,
-                  we unlock the true story behind your brand, transforming insights into impactful results
-                </Typography>
+                <PaddedContainer>
+                  <Typography variant="body1" className={styles.servicesDescriptionText}>
+                    We create digital solutions that inspire and grow with you. By blending creativity with tech,
+                    we unlock the true story behind your brand, transforming insights into impactful results
+                  </Typography>
+                </PaddedContainer>
                 <Box display="flex" flexDirection="row">
-                  {/* TODO: Fix color and position, too high */}
-                  <NorthEast />
-                  <Link href="#" className={styles.servicesLink}>See our work</Link>
+                  <PaddedContainer>
+                    {/* TODO: Fix color and position, too high, add link to arrow */}
+                    <NorthEast />
+                    <Link href="#" className={styles.servicesLink}>See our work</Link>
+                  </PaddedContainer>
                 </Box>
               </Box>
             </Box>
@@ -43,27 +47,27 @@ function Services() {
           </Box>
           <Box display="flex" flexDirection="row" marginTop={5} gap={5}>
             <Box display="flex" flexDirection="row" >
-              <Typography variant="h2">
+              <Typography variant="h3">
                 Clients
               </Typography>
-              <Typography variant="h2" className={styles.servicesDot}>
+              <Typography variant="h3" className={styles.servicesDot}>
                 .
               </Typography>
             </Box>
             {/* TODO: Change for logo */}
-            <Typography variant="h2">
+            <Typography variant="h3">
               Wabro
             </Typography>
-            <Typography variant="h2">
+            <Typography variant="h3">
               Wabro
             </Typography>
-            <Typography variant="h2">
+            <Typography variant="h3">
               Wabro
             </Typography>
-            <Typography variant="h2">
+            <Typography variant="h3">
               Wabro
             </Typography>
-            <Typography variant="h2">
+            <Typography variant="h3">
               Wabro
             </Typography>
           </Box>
