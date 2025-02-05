@@ -23,6 +23,16 @@ const theme = createTheme({
         },
         h3: {
             fontSize: '36px',
+        },
+        body1: {
+            fontSize: '20px',
+            fontWeight: 700
+        },
+        body2: {
+            fontSize: '16px',
+        },
+        body3: {
+            fontSize: '14px',
         }
     },
     breakpoints: {

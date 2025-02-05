@@ -1,13 +1,13 @@
 .contactUsBlackBox {
   /* TODO: Check, vh doesn't adapt to content position */
-  height: 35vh;
+  height: 20rem;
   min-width: 100%;
   background-color: #000000;
 }
 
 .contactUsBlueBox {
   /* TODO: Check, vh doesn't adapt to content position */
-  height: 35vh;
+  height: 20rem;
   min-width: 100%;
   background-color: #0B56DB;
 }
@@ -15,4 +15,5 @@
 .whiteText {
   color: #FFFFFF;
   font-weight: 300;
+  max-width: '20%';
 }

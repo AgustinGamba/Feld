@@ -1,0 +1,16 @@
+.footerContainer {
+  /* TODO: Check, vh doesn't adapt to content position */
+  height: 25vh;
+  min-width: 100%;
+  background-color: #F5F5F5;
+  align-content: center;
+}
+
+.footerLogo {
+  height: 50px;
+  width: 50px;
+}
+
+.footerBlueText {
+  color: #0B56DB;
+}
