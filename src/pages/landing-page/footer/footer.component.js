@@ -14,6 +14,7 @@ function Footer() {
             {/* TODO: Resize logo */}
             <img alt='Feld Logo' className={styles.footerLogo} src={feldLogo} />
             <Typography variant="body3">
+              {/* TODO: Check why it's wrapping */}
               Copyright © 2024 FELD.
             </Typography>
           </Box>
@@ -25,6 +26,7 @@ function Footer() {
             </Typography>
             <Box >
               <Typography variant="body2">
+                {/* TODO: Check why it's wrapping */}
                 Buenos aires | Argentina
               </Typography>
               <Typography variant="body2">
@@ -36,6 +38,7 @@ function Footer() {
         <PaddedContainer >
           <Box display="flex" flexDirection="column" gap={2}>
             <Typography variant="body1" className={styles.footerBlueText}>
+              {/* TODO: Check why its wrapping */}
               FOLLOW US.
             </Typography>
             <Box >

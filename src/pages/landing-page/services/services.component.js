@@ -2,11 +2,22 @@ import { Container, Box, Typography, Link } from '@mui/material';
 import { NorthEast } from '@mui/icons-material';
 
 import PaddedContainer from '../../../components/padded-container/paddedContainer.component';
+import Accordion from "./accordion/accordion.component"
 import styles from './services.module.css';
 
 function Services() {
+  const services = [{
+    name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+  }, {
+    name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+  }, {
+    name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+  }, {
+    name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+  }]
+
   return (
-    <Container className={styles.servicesContainer}>
+    <Container className={styles.servicesContainer} >
       <PaddedContainer >
         <Box display="flex" flexDirection="column" >
           <Box display="flex" flexDirection="row" >
@@ -20,29 +31,25 @@ function Services() {
                 </Typography>
               </Box>
               <Box display="flex" flexDirection="column" gap={10}>
-                <PaddedContainer>
-                  <Typography variant="body1" className={styles.servicesDescriptionText}>
+                <Container>
+                  <Typography variant="body2" className={styles.servicesDescriptionText}>
                     We create digital solutions that inspire and grow with you. By blending creativity with tech,
                     we unlock the true story behind your brand, transforming insights into impactful results
                   </Typography>
-                </PaddedContainer>
+                </Container>
                 <Box display="flex" flexDirection="row">
-                  <PaddedContainer>
+                  <Container>
                     {/* TODO: Fix color and position, too high, add link to arrow */}
                     <NorthEast />
                     <Link href="#" className={styles.servicesLink}>See our work</Link>
-                  </PaddedContainer>
+                  </Container>
                 </Box>
               </Box>
             </Box>
             <Container className={styles.splashContainer}>
-              {/* TODO: Add expandable list component */}
-              <div>
-                01/
-              </div>
-              <div>
-                Graphic design
-              </div>
+              <Box display="flex" flexDirection="column" gap={3}>
+                {services.map((service, index) => <Accordion service={service} position={index + 1} />)}
+              </Box>
             </Container>
           </Box>
           <Box display="flex" flexDirection="row" marginTop={5} gap={5}>

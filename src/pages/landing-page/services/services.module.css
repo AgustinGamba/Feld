@@ -21,9 +21,19 @@
 
 .servicesDescriptionText {
   font-size: 16px;
-  color: #A0A0A0
+  color: #A0A0A0;
+  font-weight: 500;
 }
 
 .servicesLink {
   font-size: 20px;
+}
+
+.servicesAccordion {
+  max-width: 328px;
+  border: solid 1px #FFFFFF;
+  box-shadow: none;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
 }

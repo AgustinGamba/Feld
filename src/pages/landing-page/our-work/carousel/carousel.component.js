@@ -4,7 +4,8 @@ import { Box } from '@mui/material'
 // import styles from './ourWork.module.css';
 
 const Carousel = () => {
-  const slides = ['https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400'];
+  // const slides = ['https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400'];
+  const slides = ["https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg", "https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg", "https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg", "https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg", "https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg", "https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg"]
 
   const carouselRef = useRef(null);
   const [inView, setInView] = useState(false);
