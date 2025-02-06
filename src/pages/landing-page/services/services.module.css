@@ -1,6 +1,6 @@
 .servicesContainer {
   /* TODO: Check, vh doesn't adapt to content position */
-  height: 70vh;
+  height: 45rem;
   min-width: 100%;
   background-color: #E8E8E8;
 }

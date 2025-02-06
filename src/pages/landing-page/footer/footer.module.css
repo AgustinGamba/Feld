@@ -1,6 +1,6 @@
 .footerContainer {
   /* TODO: Check, vh doesn't adapt to content position */
-  height: 25vh;
+  height: 15rem;
   min-width: 100%;
   background-color: #F5F5F5;
   align-content: center;

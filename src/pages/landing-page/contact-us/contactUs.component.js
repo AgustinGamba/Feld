@@ -9,7 +9,7 @@ function ContactUs() {
     <Container>
       <Box display="flex" flexDirection="row" textAlign='center' className={styles.contactUsBlackBox}>
         <img alt='Lets talk' src={letsTalk} />
-        <Typography alignContent='center' variant="h2" width='50%' className={styles.whiteText}>
+        <Typography alignContent='center' variant="h3" width='50%' className={styles.whiteText}>
           Let's talk
           and shape that
           idea you have.
@@ -17,11 +17,11 @@ function ContactUs() {
       </Box>
       <Box display="flex" flexDirection="row" className={styles.contactUsBlueBox}>
         <PaddedContainer>
-          <Typography textAlign='center' variant="h2" width='50%' className={styles.whiteText}>
+          <Typography textAlign='center' variant="h3" width='50%' className={styles.whiteText}>
             Contact us.
           </Typography>
         </PaddedContainer>
-        <Typography variant="h2" width='50%' className={styles.whiteText}>
+        <Typography variant="h3" width='50%' className={styles.whiteText}>
           Form
         </Typography>
       </Box>

@@ -1,8 +1,8 @@
 .headerContainer {
   min-width: 100%;
-  background-color: #f5f5f5;
+  background-color: #E8E8E8;
   /* TODO: Check, vh doesn't adapt to content position */
-  height: 45vh;
+  height: 35rem;
 }
 
 .headerLogo {
@@ -20,10 +20,12 @@
 
 .headerText {
   font-size: 60px;
-  /* TODO: Fix font family */
-  /* font-family: Manrope; */
-  /* Should I keep this? */
+  /* TODO: Should I keep this? */
   line-height: 80.25px;
+}
+
+.headerBoldText {
+  font-weight: 600;
 }
 
 .headerLink {

@@ -47,27 +47,27 @@ function Services() {
           </Box>
           <Box display="flex" flexDirection="row" marginTop={5} gap={5}>
             <Box display="flex" flexDirection="row" >
-              <Typography variant="h3">
+              <Typography variant="h4">
                 Clients
               </Typography>
-              <Typography variant="h3" className={styles.servicesDot}>
+              <Typography variant="h4" className={styles.servicesDot}>
                 .
               </Typography>
             </Box>
             {/* TODO: Change for logo */}
-            <Typography variant="h3">
+            <Typography variant="h4">
               Wabro
             </Typography>
-            <Typography variant="h3">
+            <Typography variant="h4">
               Wabro
             </Typography>
-            <Typography variant="h3">
+            <Typography variant="h4">
               Wabro
             </Typography>
-            <Typography variant="h3">
+            <Typography variant="h4">
               Wabro
             </Typography>
-            <Typography variant="h3">
+            <Typography variant="h4">
               Wabro
             </Typography>
           </Box>
