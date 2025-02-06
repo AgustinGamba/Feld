@@ -8,7 +8,6 @@ const theme = createTheme({
                 disableGutters: true,
                 spacing: 8,
                 maxWidth: false,
-
             },
         },
     },

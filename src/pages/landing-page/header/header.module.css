@@ -3,6 +3,7 @@
   background-color: #E8E8E8;
   /* TODO: Check, vh doesn't adapt to content position */
   height: 35rem;
+  align-content: center;
 }
 
 .headerLogo {

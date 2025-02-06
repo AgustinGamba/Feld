@@ -1,6 +1,8 @@
 Linter, prettier ie only single quotes
 is it possible to avoid direction = { "center"} in jsx ? use direction = 'center'
 
+Add .componentXXXX to scss files ie headerContainer instead of container
+
 Fix favicon
 Replace px with correct values
 

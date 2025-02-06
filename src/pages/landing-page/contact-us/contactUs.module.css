@@ -1,19 +1,29 @@
 .contactUsBlackBox {
   /* TODO: Check, vh doesn't adapt to content position */
-  height: 20rem;
+  height: 25rem;
   min-width: 100%;
   background-color: #000000;
+  align-items: center;
 }
 
 .contactUsBlueBox {
   /* TODO: Check, vh doesn't adapt to content position */
-  height: 20rem;
+  height: 25rem;
   min-width: 100%;
   background-color: #0B56DB;
+  align-items: center;
 }
 
-.whiteText {
+.contactUsHalfContainer {
+  flex: 0 1 50%;
+}
+
+.contactUsWhiteText {
   color: #FFFFFF;
   font-weight: 300;
-  max-width: '20%';
+}
+
+.contactUsBorder {
+  padding-bottom: 20px;
+  border-bottom: solid 1.5px #FFFFFF;
 }
