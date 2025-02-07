@@ -1,6 +1,12 @@
 .pillBox {
+
+  max-width: fit-content;
   color: #0B56DB;
   padding: 0 5px;
   border: solid 1px #0B56DB;
   border-radius: 40px;
+}
+
+.pillText {
+  line-height: 1.2;
 }

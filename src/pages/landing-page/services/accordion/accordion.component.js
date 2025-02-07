@@ -1,4 +1,4 @@
-import { Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Typography, Accordion, AccordionSummary, AccordionDetails, Box } from '@mui/material';
 import { NorthEast } from '@mui/icons-material';
 
 import Pill from "../pill/pill.component"
@@ -14,10 +14,12 @@ function FeldAccordion({ service, position }) {
         aria-controls={`accordion-${position}-content`}
         id={`panel-${position}-header`}
       >
-        <Pill position={position} />
-        <Typography variant='h5' >
-          {service.name}
-        </Typography>
+        <Box display="flex" gap={1} alignItems="center">
+          <Pill position={position} />
+          <Typography variant='h5' >
+            {service.name}
+          </Typography>
+        </Box>
       </AccordionSummary>
       <AccordionDetails>
         <Typography className={styles.servicesDescriptionText}>
