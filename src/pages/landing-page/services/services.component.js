@@ -5,6 +5,8 @@ import PaddedContainer from '../../../components/padded-container/paddedContaine
 import Accordion from "./accordion/accordion.component"
 import styles from './services.module.css';
 
+// TODO: When I open an accordion only 1 should be open at any moment at most
+// TODO: When I open an accordion the "Services." text should not move, same with the background 
 function Services() {
   const services = [{
     name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
@@ -46,11 +48,16 @@ function Services() {
                 </Box>
               </Box>
             </Box>
-            <Container className={styles.splashContainer}>
-              <Box display="flex" flexDirection="column" gap={3}>
-                {services.map((service, index) => <Accordion service={service} position={index + 1} />)}
+            <PaddedContainer className={styles.splashContainer}>
+              {/* TODO: Only one accordion should open */}
+              <Box display="flex" flexWrap="wrap" gap={3}>
+                {services.map((service, index) => (
+                  <Container key={index}>
+                    <Accordion service={service} position={index + 1} />
+                  </Container>
+                ))}
               </Box>
-            </Container>
+            </PaddedContainer>
           </Box>
           <Box display="flex" flexDirection="row" marginTop={5} gap={5}>
             <Box display="flex" flexDirection="row" >

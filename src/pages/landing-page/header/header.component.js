@@ -1,13 +1,13 @@
 import { Container, Box, Link, Typography } from '@mui/material'
 import { Menu, NorthEast } from '@mui/icons-material';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import PaddedContainer from '../../../components/padded-container/paddedContainer.component';
 import feldLogo from '../../../assets/feldLogoColor.svg'
 import styles from './header.module.css';
 
 function Header() {
-  const digitalSolutionsClass = classNames(styles.headerText, styles.headerBoldText)
+  const digitalSolutionsClass = clsx(styles.headerText, styles.headerBoldText)
 
   return (
     <Container className={styles.headerContainer}>

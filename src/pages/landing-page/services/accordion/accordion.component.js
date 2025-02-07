@@ -31,7 +31,7 @@ function FeldAccordion({ service, position }) {
           </Box>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography className={styles.servicesDescriptionText}>
+          <Typography className={styles.accordionDescriptionText}>
             {service.description}
           </Typography>
         </AccordionDetails>

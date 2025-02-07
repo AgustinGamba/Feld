@@ -1,5 +1,5 @@
 import { Container, Box, Typography } from '@mui/material';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import letsTalk from '../../../assets/letsTalk.svg';
 import { NorthEast } from '@mui/icons-material';
@@ -7,7 +7,7 @@ import PaddedContainer from '../../../components/padded-container/paddedContaine
 import styles from './contactUs.module.css';
 
 function ContactUs() {
-  const whiteTextWithBorderClass = classNames(styles.contactUsWhiteText, styles.contactUsBorder)
+  const whiteTextWithBorderClass = clsx(styles.contactUsWhiteText, styles.contactUsBorder)
 
   return (
     <Container>

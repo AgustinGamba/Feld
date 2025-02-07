@@ -1,10 +1,11 @@
 import { Container } from '@mui/material';
+import clsx from 'clsx';
 
 import styles from './paddedContainer.module.css';
 
-function PaddedContainer({ children }) {
+function PaddedContainer({ children, className }) {
     return (
-        <Container className={styles.paddedContainer}>
+        <Container className={clsx(styles.paddedContainer, className)}>
             {children}
         </Container>
     );
