@@ -10,6 +10,41 @@ const theme = createTheme({
                 maxWidth: false,
             },
         },
+        MuiTextField: {
+            defaultProps: {
+                variant: "standard",
+            },
+            styleOverrides: {
+                root: {
+                    "& .MuiInputBase-input": {
+                        color: "#FFFFFF",
+                        fontSize: "16px",
+                        minWidth: "280px"
+                    },
+                    "& .MuiInputLabel-root": {
+                        color: "#FFFFFF",
+                        fontSize: "18px",
+                    },
+                    "& .MuiInputLabel-root.Mui-focused": {
+                        color: "#FFFFFF",
+                    },
+                    "& .MuiInputLabel-root.MuiInputLabel-shrink": {
+                        fontSize: "14px",
+                    },
+                    "& .MuiInput-underline:before": {
+                        borderBottomColor: "#FFFFFF",
+                        opacity: 0.7,
+                    },
+                    "& .MuiInput-underline:hover:before": {
+                        borderBottomColor: "#FFFFFF !important",
+                        opacity: 1,
+                    },
+                    "& .MuiInput-underline:after": {
+                        borderBottomColor: "#FFFFFF",
+                    },
+                },
+            },
+        },
     },
     typography: {
         fontFamily: 'Manrope',
