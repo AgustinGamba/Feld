@@ -1,14 +1,28 @@
 .footerContainer {
-  /* TODO: Check, vh doesn't adapt to content position */
-  height: 15rem;
+  height: fit-content;
+  padding: 5% 0;
   min-width: 100%;
   background-color: #F5F5F5;
   align-content: center;
 }
 
 .footerLogo {
-  height: 50px;
-  width: 50px;
+  height: 48px;
+  width: 116px;
+}
+
+.footerArrowIcon {
+  height: 16px;
+  width: 16px;
+}
+
+.footerUnderlinedHyperlink {
+  text-decoration: underline;
+}
+
+.footerHyperlink {
+  color: #0B56DB;
+  text-decoration: none;
 }
 
 .footerBlueText {
