@@ -3,16 +3,17 @@ import { NorthEast } from '@mui/icons-material';
 import feldLogo from '../../../assets/feldLogo.svg'
 import clsx from 'clsx';
 
+import PaddedContainer from '../../../components/padded-container/paddedContainer.component';
 import styles from './footer.module.css';
 
 function Footer() {
   const arrowIconClass = clsx(styles.footerHyperlink, styles.footerArrowIcon)
 
   return (
-    <Container className={styles.footerContainer}>
+    <PaddedContainer className={styles.footerContainer}>
       <Box display="flex" flexDirection="row">
         <Container >
-          <Box display="flex" flexDirection="column" alignItems="center">
+          <Box display="flex" flexDirection="column" alignItems="stretch">
             <Box display="flex" flexDirection="column" alignItems="flex-start" gap={1}>
               <img alt='Feld Logo' className={styles.footerLogo} src={feldLogo} />
               <Typography variant="body3">
@@ -73,7 +74,7 @@ function Footer() {
           </Box>
         </Container>
       </Box >
-    </Container >
+    </PaddedContainer >
   );
 }
 

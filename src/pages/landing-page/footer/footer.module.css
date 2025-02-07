@@ -1,9 +1,7 @@
 .footerContainer {
   height: fit-content;
-  padding: 5% 0;
-  min-width: 100%;
+  padding: 5% 10%;
   background-color: #F5F5F5;
-  align-content: center;
 }
 
 .footerLogo {
