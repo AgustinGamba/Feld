@@ -10,41 +10,36 @@ function Header() {
   const digitalSolutionsClass = clsx(styles.headerText, styles.headerBoldText)
 
   return (
-    <Container className={styles.headerContainer}>
-      <PaddedContainer >
-        <Box className={styles.headerBox} display="flex" justifyContent="space-between">
-          {/* TODO: Resize logo */}
+    <PaddedContainer className={styles.headerContainer}>
+      <Box display="flex" flexDirection="column" gap={9}>
+        <Box display="flex" justifyContent="space-between">
           <img alt='Feld Logo' className={styles.headerLogo} src={feldLogo} />
-          {/* TODO: Resize icon, add functionality */}
-          <Menu />
+          {/* TODO: add functionality */}
+          <Menu className={styles.headerMenuIcon} />
         </Box>
-        {/* TODO: Define space between header bar and this */}
-        <Box className={styles.headerTextBox} display="flex" gap={5} alignItems="center" flexDirection="column" textAlign="center">
-          <Box display="flex" flexDirection="column">
+        <Box className={styles.headerTextBox} display="flex" gap={4} alignSelf="center" flexDirection="column" textAlign="center">
+          <Box display="flex" flexDirection="column" alignContent="center" alignItems="center" alignSelf="center" justifyContent="center">
             <Typography variant="h2" className={styles.headerText}>
               We boost brands
-            </Typography>
-            <Typography variant="h2" className={styles.headerText}>
               with creativity
+              and&nbsp;
             </Typography>
-            <Box display="flex" flexDirection="row">
-              <Typography variant="h2" className={styles.headerText}>
-                and&nbsp;
-              </Typography>
-              <Typography variant="h2" className={digitalSolutionsClass}>
-                digital solutions.
-              </Typography>
-            </Box>
+            <Typography variant="h2" className={digitalSolutionsClass}>
+              digital solutions.
+            </Typography>
           </Box>
-          <Box display="flex" flexDirection="row">
+          <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center">
             {/* TODO: Fix color and position, too high */}
-            <NorthEast />
-            <Link href="#" className={styles.headerLink}>See our work</Link>
+            <NorthEast className={styles.headerHyperlink} />
+            <Link href="#" className={styles.headerHyperlink}>
+              <Typography variant="body1" >
+                See our work
+              </Typography>
+            </Link>
           </Box>
-          {/* TODO: Define space between header text and header end */}
         </Box>
-      </PaddedContainer >
-    </Container >
+      </Box>
+    </PaddedContainer >
   );
 }
 

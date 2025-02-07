@@ -1,26 +1,27 @@
 .headerContainer {
-  min-width: 100%;
+  min-width: fit-content;
   background-color: #E8E8E8;
-  /* TODO: Check, vh doesn't adapt to content position */
-  height: 35rem;
-  align-content: center;
+  padding-top: 2.5%;
+  padding-bottom: 4%;
 }
 
 .headerLogo {
-  height: 50px;
-  width: 50px;
+  height: 36px;
+  width: 88px;
 }
 
-.headerBox {
-  width: 100%;
+.headerMenuIcon {
+  height: 36px;
+  width: 36px;
 }
 
 .headerTextBox {
-  width: 100%;
+  max-width: 50%;
 }
 
 .headerText {
   font-size: 60px;
+  font-weight: 500;
   /* TODO: Should I keep this? */
   line-height: 80.25px;
 }
@@ -29,6 +30,6 @@
   font-weight: 600;
 }
 
-.headerLink {
-  font-size: 20px;
+.headerHyperlink {
+  color: #0B56DB;
 }
