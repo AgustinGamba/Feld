@@ -1,22 +1,24 @@
-import { Container, Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
+import PaddedContainer from '../../../../components/padded-container/paddedContainer.component';
 import Form from "./form/form.component";
+
 import styles from './blueBox.module.css';
 
 function BlueBox() {
   return (
-    <Container>
-      <Box display="flex" flexDirection="row" className={styles.blueBoxContainer}>
-        <Container className={styles.blueBoxHalfContainer}>
-          <Box display="flex" justifyContent="flex-end">
-            <Typography textAlign='center' variant="h2" className={styles.blueBoxWhiteText}>
-              Contact us.
-            </Typography>
-          </Box>
-        </Container>
-        <Form />
+    <PaddedContainer className={styles.blueBoxContainer}>
+      <Box display="flex" flexDirection="row">
+        <Box display="flex" justifyContent="center" className={styles.blueBoxHalfContainer}>
+          <Typography textAlign='center' variant="h1" className={styles.blueBoxWhiteText}>
+            Contact us.
+          </Typography>
+        </Box>
+        <Box display="flex" justifyContent="center" className={styles.blueBoxHalfContainer}>
+          <Form />
+        </Box>
       </Box>
-    </Container>
+    </PaddedContainer>
   );
 }
 

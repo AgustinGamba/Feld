@@ -1,13 +1,12 @@
 .blueBoxContainer {
   /* TODO: Check, vh doesn't adapt to content position */
   height: 25rem;
-  min-width: 100%;
   background-color: #0B56DB;
-  align-items: center;
+  align-content: center;
 }
 
 .blueBoxHalfContainer {
-  flex: 0 1 50%;
+  flex: 0 0 50%;
 }
 
 .blueBoxWhiteText {

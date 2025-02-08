@@ -19,7 +19,7 @@ const theme = createTheme({
                     "& .MuiInputBase-input": {
                         color: "#FFFFFF",
                         fontSize: "16px",
-                        minWidth: "280px"
+                        minWidth: "180px"
                     },
                     "& .MuiInputLabel-root": {
                         color: "#FFFFFF",
