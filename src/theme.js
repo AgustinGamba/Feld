@@ -19,6 +19,7 @@ const theme = createTheme({
                     "& .MuiInputBase-input": {
                         color: "#FFFFFF",
                         fontSize: "16px",
+                        // TODO: Adjust width based on screen size
                         minWidth: "180px"
                     },
                     "& .MuiInputLabel-root": {

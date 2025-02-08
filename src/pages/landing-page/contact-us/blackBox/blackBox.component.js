@@ -13,8 +13,8 @@ function BlackBox() {
           <img alt='Lets talk' src={letsTalk} />
         </Box>
         {/* TODO: Text should move to bottom when screen is too small */}
-        <Box display="flex" justifyContent="center" className={styles.contactUsHalfContainer}>
-          <Typography variant="h3" width={"50%"} className={styles.blackBoxWhiteText}>
+        <Box display="flex" justifyContent="center" textAlign="center" className={styles.blackBoxHalfContainer}>
+          <Typography variant="h3" width={"60%"} className={styles.blackBoxWhiteText}>
             Let's talk
             and shape that
             idea you have.
