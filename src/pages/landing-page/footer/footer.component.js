@@ -33,6 +33,7 @@ function Footer() {
                   Buenos aires | Argentina
                 </Typography>
                 <Typography variant="body2">
+                  {/* TODO Add link */}
                   +54 9 11-3518-0602
                 </Typography>
               </Box>
@@ -46,10 +47,12 @@ function Footer() {
                 FOLLOW US.
               </Typography>
               <Box >
+                {/* TODO: Add link */}
                 <Typography variant="body2" className={styles.footerUnderlinedHyperlink}>
                   Instagram
                 </Typography>
                 <Typography variant="body2" className={styles.footerUnderlinedHyperlink}>
+                  {/* TODO: Add link */}
                   LinkedIn
                 </Typography>
               </Box>
@@ -66,6 +69,7 @@ function Footer() {
                 <NorthEast className={arrowIconClass} />
                 <Link href="#" className={styles.footerHyperlink}>
                   <Typography variant="body2" >
+                    {/* TODO: Add link */}
                     info@estudiofeld.com
                   </Typography>
                 </Link>

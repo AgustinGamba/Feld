@@ -46,10 +46,12 @@ function Services() {
                     </Typography>
                   </Container>
                   <Box display="flex" flexDirection="row">
-                    <Container>
-                      <NorthEast />
-                      <Link href="#" className={styles.servicesLink}>See our work</Link>
-                    </Container>
+                    <NorthEast className={styles.servicesHyperlink} />
+                    <Link href="#" className={styles.servicesHyperlink}>
+                      <Typography variant="body1" >
+                        See our work
+                      </Typography>
+                    </Link>
                   </Box>
                 </Box>
               </Box>

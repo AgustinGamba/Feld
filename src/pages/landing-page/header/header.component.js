@@ -29,7 +29,6 @@ function Header() {
             </Typography>
           </Box>
           <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center">
-            {/* TODO: Fix color and position, too high */}
             <NorthEast className={styles.headerHyperlink} />
             <Link href="#" className={styles.headerHyperlink}>
               <Typography variant="body1" >
