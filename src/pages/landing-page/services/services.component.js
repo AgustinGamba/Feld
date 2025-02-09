@@ -9,7 +9,7 @@ import styles from './services.module.css';
 
 function Services() {
   const services = [{
-    name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
   }, {
     name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
   }, {
@@ -27,10 +27,10 @@ function Services() {
     <Container className={styles.servicesContainer} >
       <Container className={styles.servicesBackgroundImage} >
         <PaddedContainer >
-          <Box display="flex" flexDirection="column" >
+          <Box display="flex" flexDirection="column" gap={10} >
             <Box display="flex" flexDirection="row" >
-              <Box display="flex" flexDirection="column" width='40%'>
-                <Box display="flex" flexDirection="row" marginTop={5} marginBottom={5} >
+              <Box display="flex" flexDirection="column" width='40%' gap={5}>
+                <Box display="flex" flexDirection="row" >
                   <Typography variant="h1">
                     Services
                   </Typography>

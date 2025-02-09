@@ -1,17 +1,16 @@
 .servicesContainer {
-  /* TODO: Check, rem doesn't adapt to content position */
-  height: 45rem;
   min-width: 100%;
   align-content: center;
   background-color: #e8e8e8;
 }
 
 .servicesBackgroundImage {
-  align-content: center;
+  padding-top: 7%;
+  padding-bottom: 4%;
   height: 100%;
   background: linear-gradient(rgba(232, 232, 232, 0.4), rgba(232, 232, 232, .4)), url('../../../assets/splash.png');
-  background-position: 100% center;
-  background-size: auto;
+  background-position: top right;
+  background-size: 70%;
   background-repeat: no-repeat;
 
 }

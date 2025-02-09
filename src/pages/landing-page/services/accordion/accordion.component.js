@@ -1,4 +1,4 @@
-import { Typography, Accordion, AccordionSummary, AccordionDetails, Box, Container } from '@mui/material';
+import { Typography, Accordion, AccordionSummary, AccordionDetails, Box } from '@mui/material';
 import { NorthEast } from '@mui/icons-material';
 
 import Pill from "../pill/pill.component"
@@ -7,7 +7,7 @@ import styles from './accordion.module.css';
 
 function FeldAccordion({ service, position, onChange, expanded }) {
   return (
-    <Box width="fit-content">
+    <Box>
       <Accordion
         square
         className={styles.accordionContainer}

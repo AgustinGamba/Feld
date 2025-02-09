@@ -4,7 +4,7 @@
   box-shadow: none;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(40px);
 }
 
 .accordionDescriptionText {
