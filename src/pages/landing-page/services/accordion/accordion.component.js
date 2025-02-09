@@ -5,10 +5,15 @@ import Pill from "../pill/pill.component"
 
 import styles from './accordion.module.css';
 
-function FeldAccordion({ service, position }) {
+function FeldAccordion({ service, position, onChange, expanded }) {
   return (
     <Box width="fit-content">
-      <Accordion square className={styles.accordionContainer} >
+      <Accordion
+        square
+        className={styles.accordionContainer}
+        onChange={onChange}
+        expanded={expanded}
+      >
         <AccordionSummary
           aria-controls={`accordion-${position}-content`}
           id={`panel-${position}-header`}

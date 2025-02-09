@@ -1,5 +1,7 @@
 import { Container, Box, Typography, Link } from '@mui/material';
 import { NorthEast } from '@mui/icons-material';
+import React, { useState } from "react";
+
 
 import PaddedContainer from '../../../components/padded-container/paddedContainer.component';
 import Accordion from "./accordion/accordion.component"
@@ -15,6 +17,11 @@ function Services() {
   }, {
     name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
   }]
+  const [expanded, setExpanded] = useState(null);
+
+  const handleChange = id => (_, isExpanded) => {
+    setExpanded(isExpanded ? id : null);
+  };
 
   return (
     <Container className={styles.servicesContainer} >
@@ -47,10 +54,14 @@ function Services() {
                 </Box>
               </Box>
               <PaddedContainer>
-                {/* TODO: Only one accordion should open */}
                 <Box display="flex" flexDirection="row" flexWrap="wrap" gap={3}>
                   {services.map((service, index) => (
-                    <Accordion key={index} service={service} position={index + 1} />
+                    <Accordion
+                      key={index + 1}
+                      service={service}
+                      position={index + 1}
+                      onChange={handleChange(index + 1)}
+                      expanded={expanded === index + 1} />
                   ))}
                 </Box>
               </PaddedContainer>
