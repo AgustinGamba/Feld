@@ -7,7 +7,7 @@ import styles from './accordion.module.css';
 
 function FeldAccordion({ service, position }) {
   return (
-    <Container>
+    <Box width="fit-content">
       <Accordion square className={styles.accordionContainer} >
         <AccordionSummary
           aria-controls={`accordion-${position}-content`}
@@ -36,7 +36,7 @@ function FeldAccordion({ service, position }) {
           </Typography>
         </AccordionDetails>
       </Accordion >
-    </Container>
+    </Box>
   )
 }
 

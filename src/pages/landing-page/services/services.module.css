@@ -1,22 +1,23 @@
 .servicesContainer {
-  /* TODO: Check, vh doesn't adapt to content position */
+  /* TODO: Check, rem doesn't adapt to content position */
   height: 45rem;
   min-width: 100%;
-  background-color: #E8E8E8;
   align-content: center;
+  background-color: #e8e8e8;
+}
+
+.servicesBackgroundImage {
+  align-content: center;
+  height: 100%;
+  background: linear-gradient(rgba(232, 232, 232, 0.4), rgba(232, 232, 232, .4)), url('../../../assets/splash.png');
+  background-position: 100% center;
+  background-size: auto;
+  background-repeat: no-repeat;
+
 }
 
 .servicesDot {
   color: #0B56DB;
-}
-
-.splashContainer {
-  background-image: url('../../../assets/splash.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  /* TODO: Remove? */
-  position: relative;
 }
 
 .servicesDescriptionText {
