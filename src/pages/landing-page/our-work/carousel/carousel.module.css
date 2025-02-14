@@ -1,0 +1,12 @@
+.carouselImage {
+  width: 320px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  /* TODO: Keep shadow? */
+  /* box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.carouselSubtitle {
+  color: #A0A0A0
+}

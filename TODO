@@ -1,3 +1,5 @@
+Responsiveness
+
 Linter, prettier ie only single quotes
 is it possible to avoid direction = { "center"} in jsx ? use direction = 'center'
 Reorder imports ie { Container, Box, Typography, Link, Accordion } to {  Accordion,  Box, Container, Link,  Typography }

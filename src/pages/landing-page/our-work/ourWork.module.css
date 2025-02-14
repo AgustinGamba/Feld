@@ -1,8 +1,9 @@
 .ourWorkContainer {
   /* TODO: Check, vh doesn't adapt to content position */
-  height: 40rem;
+  min-height: 100dvh;
+  padding-bottom: 10%;
   min-width: 100%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .ourWorkDot {

@@ -1,87 +1,34 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Box } from '@mui/material'
+import { Box, Typography } from "@mui/material";
 
-// import styles from './ourWork.module.css';
+import imagePlaceholder from "../../../../assets/feldCarouselPlaceholder.png"
+import styles from "./carousel.module.css";
 
-const Carousel = () => {
-  // const slides = ['https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400', 'https://placehold.co/320x400'];
-  const slides = ["https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg", "https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg", "https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg", "https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg", "https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg", "https://www.shutterstock.com/shutterstock/photos/1546182461/display_1500/stock-vector-beautiful-female-figure-vector-logo-design-template-and-illustration-in-simple-minimal-linear-1546182461.jpg"]
+const slides = [
+  { name: "Wabro S.A.", description: "Branding & website", image: imagePlaceholder },
+  { name: "Wabro S.A.", description: "Branding & website", image: imagePlaceholder },
+  { name: "Wabro S.A.", description: "Branding & website", image: imagePlaceholder },
+  { name: "Wabro S.A.", description: "Branding & website", image: imagePlaceholder },
+  { name: "Wabro S.A.", description: "Branding & website", image: imagePlaceholder },
+  { name: "Wabro S.A.", description: "Branding & website", image: imagePlaceholder },
+  { name: "Wabro S.A.", description: "Branding & website", image: imagePlaceholder },
+  { name: "Wabro S.A.", description: "Branding & website", image: imagePlaceholder },
+  { name: "Wabro S.A.", description: "Branding & website", image: imagePlaceholder },
+];
 
-  const carouselRef = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            console.log('in')
-            setInView(true);
-          } else {
-            console.log('out')
-            setInView(false);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    if (carouselRef.current) {
-      observer.observe(carouselRef.current);
-    }
-
-    return () => {
-      if (carouselRef.current) {
-        observer.unobserve(carouselRef.current);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (inView && carouselRef.current) {
-      const scrollInterval = setInterval(() => {
-        const scrollWidth = carouselRef.current.scrollWidth;
-        const clientWidth = carouselRef.current.clientWidth;
-
-        if (carouselRef.current.scrollLeft + clientWidth < scrollWidth) {
-          carouselRef.current.scrollLeft += 70;
-        } else {
-          clearInterval(scrollInterval);
-        }
-      }, 20);
-
-      return () => clearInterval(scrollInterval);
-    }
-  }, [inView]);
-
+const Carousel = ({ scrollContentRef }) => {
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box
-        ref={carouselRef}
-        sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          transition: 'scroll 0.5s ease-in-out',
-          width: 'max-content',
-          overflow: 'hidden',
-        }}
-      >
-        {slides.map((slide, index) => (
-          <Box
-            key={index}
-            sx={{
-              flexShrink: 0,
-              width: 320,
-              height: 400,
-              backgroundImage: `url(${slide})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              marginRight: 1.5,
-              borderRadius: 4,
-            }}
-          />
-        ))}
-      </Box>
+    <Box ref={scrollContentRef} display="flex" gap={1}>
+      {slides.map((slide, index) => (
+        <Box key={index + 1}>
+          <img src={slide.image} alt={`Slide ${index + 1}`} className={styles.carouselImage} />
+          <Typography variant="body1">
+            {slide.name}
+          </Typography>
+          <Typography variant="body1" className={styles.carouselSubtitle}>
+            /{slide.description}
+          </Typography>
+        </Box>
+      ))}
     </Box>
   );
 };
