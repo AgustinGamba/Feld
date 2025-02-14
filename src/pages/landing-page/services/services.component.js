@@ -26,7 +26,7 @@ function Services() {
   return (
     <Container className={styles.servicesContainer} >
       <Container className={styles.servicesBackgroundImage} >
-        <PaddedContainer >
+        <Box paddingLeft="10%" >
           <Box display="flex" flexDirection="column" gap={10} >
             <Box display="flex" flexDirection="row" >
               <Box display="flex" flexDirection="column" width='40%' gap={5}>
@@ -55,7 +55,7 @@ function Services() {
                   </Box>
                 </Box>
               </Box>
-              <PaddedContainer>
+              <Box paddingLeft="5%">
                 <Box display="flex" flexDirection="row" flexWrap="wrap" gap={3}>
                   {services.map((service, index) => (
                     <Accordion
@@ -66,7 +66,7 @@ function Services() {
                       expanded={expanded === index + 1} />
                   ))}
                 </Box>
-              </PaddedContainer>
+              </Box>
             </Box>
             <Box display="flex" flexDirection="row" marginTop={5} gap={5}>
               <Box display="flex" flexDirection="row" >
@@ -95,7 +95,7 @@ function Services() {
               </Typography>
             </Box>
           </Box>
-        </PaddedContainer>
+        </Box>
       </Container >
     </Container >
   );
