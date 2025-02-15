@@ -2,12 +2,12 @@ import { Container, Box, Typography, Link } from '@mui/material';
 import { NorthEast } from '@mui/icons-material';
 import React, { useState } from "react";
 
-
-import PaddedContainer from '../../../components/padded-container/paddedContainer.component';
 import Accordion from "./accordion/accordion.component"
 import styles from './services.module.css';
+import Carousel from './carousel/carousel.component';
 
 function Services() {
+  // TODO: Remove placeholder, add real data
   const services = [{
     name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
   }, {
@@ -16,7 +16,8 @@ function Services() {
     name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
   }, {
     name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
-  }]
+  }];
+
   const [expanded, setExpanded] = useState(null);
 
   const handleChange = id => (_, isExpanded) => {
@@ -77,22 +78,7 @@ function Services() {
                   .
                 </Typography>
               </Box>
-              {/* TODO: Change for logo carousel? */}
-              <Typography variant="h4">
-                Wabro
-              </Typography>
-              <Typography variant="h4">
-                Wabro
-              </Typography>
-              <Typography variant="h4">
-                Wabro
-              </Typography>
-              <Typography variant="h4">
-                Wabro
-              </Typography>
-              <Typography variant="h4">
-                Wabro
-              </Typography>
+              <Carousel />
             </Box>
           </Box>
         </Box>

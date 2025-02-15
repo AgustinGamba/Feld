@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import PaddedContainer from '../../../components/padded-container/paddedContainer.component'
-import Carousel from './carousel/carousel.component';
+import HorizontalScroll from './horizontal-scroll/horizontalScroll.component';
 import styles from './ourWork.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +46,7 @@ function OurWork() {
         </Box>
       </PaddedContainer>
       <Box ref={scrollContentRef}>
-        <Carousel scrollContentRef={scrollContentRef} />
+        <HorizontalScroll scrollContentRef={scrollContentRef} />
       </Box>
       <PaddedContainer>
         <Box display="flex" flexDirection="row" alignItems="center" justifyContent="flex-end" marginTop={15} marginBottom={5} gap={1}>

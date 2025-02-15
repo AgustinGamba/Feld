@@ -1,4 +1,4 @@
-.carouselImage {
+.horizontalScrollImage {
   width: 320px;
   height: 400px;
   object-fit: cover;
@@ -7,6 +7,6 @@
   /* box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.1); */
 }
 
-.carouselSubtitle {
+.horizontalScrollSubtitle {
   color: #A0A0A0
 }
