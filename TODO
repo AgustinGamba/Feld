@@ -12,4 +12,6 @@ Add azul feld to design system
 Fix favicon
 Replace px with correct values
 
+Remove unused css classes
+
 Add design system values
