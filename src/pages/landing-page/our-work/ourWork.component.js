@@ -48,16 +48,6 @@ function OurWork() {
       <Box ref={scrollContentRef}>
         <HorizontalScroll scrollContentRef={scrollContentRef} />
       </Box>
-      <PaddedContainer>
-        <Box display="flex" flexDirection="row" alignItems="center" justifyContent="flex-end" marginTop={15} marginBottom={5} gap={1}>
-          <ArrowForwardIcon fontSize="large" />
-          <Typography variant="h3">
-            {/* TODO: Add button or remove? 
-              If removed add more space to ourwork to fill 100% of vh */}
-            See all projects
-          </Typography>
-        </Box>
-      </PaddedContainer>
     </Container>
   );
 }

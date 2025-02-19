@@ -24,6 +24,9 @@ function FeldAccordion({ service, position, onChange, expanded }) {
               borderBottom: "solid 1px",
               margin: "20px 10px"
             },
+            "& .MuiAccordionSummary-content.Mui-expanded": {
+              margin: "20px 10px"
+            }
           }}
         >
           <Box display="flex" gap={1} alignItems="center">
@@ -31,8 +34,13 @@ function FeldAccordion({ service, position, onChange, expanded }) {
             <Typography variant='h5' >
               {service.name}
             </Typography>
-            {/* TODO: Change arrow color */}
-            <NorthEast />
+            <NorthEast
+              sx={{
+                // TODO: Move to stylesheet
+                transform: expanded ? "rotate(90deg)" : "rotate(0deg)",
+                transition: "transform 0.3s ease-in-out"
+              }}
+            />
           </Box>
         </AccordionSummary>
         <AccordionDetails>

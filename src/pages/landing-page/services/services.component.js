@@ -9,13 +9,13 @@ import Carousel from './carousel/carousel.component';
 function Services() {
   // TODO: Remove placeholder, add real data
   const services = [{
-    name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    name: "Graphic Design", description: "We bring your ideas to life. A well-crafted design can transform your brand's perception, enhance its image, and create a lasting impact in the market."
   }, {
-    name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    name: "Web Development", description: "We build everything you need to make your project shine in the digital world. From websites to custom platforms, we create fast, high-performing, and engaging experiences that boost user interaction and deliver measurable results."
   }, {
-    name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    name: "Digital Marketing", description: "We craft tailored marketing strategies to elevate your brand's online presence. Through compelling campaigns, we maximize your reach and drive sales effectively."
   }, {
-    name: "Graphic Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    name: "Content & Social Media", description: "We manage your social media with expertise in content creation, copywriting, art direction, and product photography. Plus, you’ll receive a monthly report to track performance and plan the next steps in real time."
   }];
 
   const [expanded, setExpanded] = useState(null);

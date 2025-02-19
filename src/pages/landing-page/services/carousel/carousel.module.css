@@ -1,6 +1,7 @@
 .carouselContainer {
   width: 100%;
   max-width: 960px;
+  overflow: hidden;
 }
 
 .carouselClientLogo {

@@ -9,7 +9,7 @@ function BlueBox() {
   return (
     <PaddedContainer className={styles.blueBoxContainer}>
       <Box display="flex" flexDirection="row">
-        <Box display="flex" justifyContent="center" className={styles.blueBoxHalfContainer}>
+        <Box display="flex" className={styles.blueBoxHalfContainer}>
           <Typography textAlign='center' variant="h1" className={styles.blueBoxWhiteText}>
             Contact us.
           </Typography>
