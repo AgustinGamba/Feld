@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { Container, Box, Typography } from '@mui/material'
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import PaddedContainer from '../../../components/padded-container/paddedContainer.component'
 import HorizontalScroll from './horizontal-scroll/horizontalScroll.component';
