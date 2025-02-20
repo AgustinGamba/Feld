@@ -63,7 +63,7 @@ const theme = createTheme({
             fontSize: '36px',
         },
         h5: {
-            fontSize: '24px',
+            fontSize: '20px',
         },
         body1: {
             fontSize: '20px',

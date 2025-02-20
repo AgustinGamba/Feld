@@ -15,14 +15,11 @@ function Services() {
   }, {
     name: "Digital Marketing", description: "We craft tailored marketing strategies to elevate your brand's online presence. Through compelling campaigns, we maximize your reach and drive sales effectively."
   }, {
-    name: "Content & Social Media", description: "We manage your social media with expertise in content creation, copywriting, art direction, and product photography. Plus, you’ll receive a monthly report to track performance and plan the next steps in real time."
+    name: "Social Media", description: "We manage your social media with expertise in content creation, copywriting, art direction, and product photography. Plus, you’ll receive a monthly report to track performance and plan the next steps in real time."
   }];
 
-  const [expanded, setExpanded] = useState(null);
-
-  const handleChange = id => (_, isExpanded) => {
-    setExpanded(isExpanded ? id : null);
-  };
+  const [fullyExpanded, setFullyExpanded] = useState(null);
+  const [hovered, setHovered] = useState(null);
 
   return (
     <Container className={styles.servicesContainer} >
@@ -63,8 +60,16 @@ function Services() {
                       key={index + 1}
                       service={service}
                       position={index + 1}
-                      onChange={handleChange(index + 1)}
-                      expanded={expanded === index + 1} />
+                      onClick={() => fullyExpanded === index + 1 ? setFullyExpanded(null) : setFullyExpanded(index + 1)}
+                      expanded={fullyExpanded === index + 1 || hovered === index + 1}
+                      onMouseEnter={() => {
+                        if (fullyExpanded !== index + 1) setFullyExpanded(null)
+                        setHovered(index + 1)
+                      }}
+                      onMouseLeave={() => {
+                        if (fullyExpanded !== index + 1) setHovered(null);
+                      }}
+                    />
                   ))}
                 </Box>
               </Box>

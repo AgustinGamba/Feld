@@ -5,13 +5,13 @@ import Pill from "../pill/pill.component"
 
 import styles from './accordion.module.css';
 
-function FeldAccordion({ service, position, onChange, expanded }) {
+function FeldAccordion({ service, position, onClick, expanded, onMouseEnter, onMouseLeave }) {
   return (
-    <Box>
+    <Box onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <Accordion
         square
         className={styles.accordionContainer}
-        onChange={onChange}
+        onClick={onClick}
         expanded={expanded}
       >
         <AccordionSummary
