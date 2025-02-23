@@ -21,9 +21,8 @@ const MainText = () => {
     const animation = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 1 });
 
     animation.set([arrowRef.current, asteriskRef.current], { opacity: 0, scale: 0.5 })
-      .fromTo(beforeArrowTextRef.current, { x: 20 }, { x: -10, duration: 0.5, ease: "power2.out" }, 0)
-      .fromTo(afterArrowTextRef.current, { x: -15 }, { x: 10, duration: 0.5, ease: "power2.out" }, 0)
-      .to(arrowRef.current, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, "-=0.3")
+      .fromTo(afterArrowTextRef.current, { x: -25 }, { x: 20, duration: 0.5, ease: "power2.out" }, 0)
+      .to(arrowRef.current, { x: 10, opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, "-=0.3")
       .to(
         asteriskRef.current,
         { opacity: 1, scale: 1, rotate: 360, duration: 0.8, ease: "back.out(1.7)", transformOrigin: "center" },
@@ -55,7 +54,7 @@ const MainText = () => {
           <Typography variant="h2" className={styles.headlineDarkerText}>
             digital solutions
           </Typography>
-          <Box height="3px"
+          <Box height="2px"
             ref={underlineRef}
             className={styles.headlineTextUnderline}
           />
