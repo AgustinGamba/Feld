@@ -31,7 +31,7 @@ function FeldAccordion({ service, position, onClick, expanded, onMouseEnter, onM
         >
           <Box display="flex" gap={1} alignItems="center">
             <Pill position={position} />
-            <Typography variant='h5' >
+            <Typography variant='body1' >
               {service.name}
             </Typography>
             <NorthEast
