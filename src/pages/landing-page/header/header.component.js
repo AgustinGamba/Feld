@@ -7,17 +7,26 @@ import feldLogo from '../../../assets/feldLogoColor.svg'
 import styles from './header.module.css';
 
 function Header() {
-
   return (
     <PaddedContainer className={styles.headerContainer}>
-      <Box display="flex" flexDirection="column" gap={9}>
-        <Box display="flex" justifyContent="space-between">
+      {/* TODO: Change gap in mobile */}
+      <Box display="flex" flexDirection="column" height="100%" alignItems="center" >
+        <Box display="flex" width="100%" alignItems="center" justifyContent="space-between" paddingTop="5%">
+          {/* TODO: Resize on mobile */}
+          {/* TODO: Navigate to main page on click */}
           <img alt='Feld Logo' className={styles.headerLogo} src={feldLogo} />
           <Menu className={styles.headerMenuIcon} />
         </Box>
-        <Box className={styles.headerTextBox} display="flex" gap={4} alignSelf="center" flexDirection="column" textAlign="center">
+        <Box
+          display="flex"
+          flexDirection="column"
+          height="100%"
+          justifyContent="center"
+          gap={8}
+        >
           <Headline />
           <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center">
+            {/* TODO: Resize on mobile */}
             <NorthEast className={styles.headerHyperlink} />
             <Link href="#" className={styles.headerHyperlink}>
               <Typography variant="body1" >

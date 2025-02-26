@@ -1,7 +1,6 @@
 .headerContainer {
+  height: 60vh;
   background-color: #E8E8E8;
-  padding-top: 2.5%;
-  padding-bottom: 4%;
 }
 
 .headerLogo {
@@ -12,10 +11,6 @@
 .headerMenuIcon {
   height: 36px;
   width: 36px;
-}
-
-.headerTextBox {
-  max-width: 50%;
 }
 
 .headerHyperlink {
