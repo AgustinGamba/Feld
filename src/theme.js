@@ -1,14 +1,12 @@
-
 import { createTheme } from '@mui/material';
 
-const theme = createTheme();
+const baseTheme = createTheme();
 
-const updatedTheme = createTheme(theme, {
+const theme = createTheme({
   components: {
     MuiContainer: {
       defaultProps: {
         disableGutters: true,
-        spacing: 8,
         maxWidth: false,
       },
     },
@@ -17,12 +15,15 @@ const updatedTheme = createTheme(theme, {
         variant: "standard",
       },
       styleOverrides: {
-        root: {
+        root: ({ theme }) => ({
           "& .MuiInputBase-input": {
             color: "#FFFFFF",
             fontSize: "16px",
-            // TODO: Adjust width based on screen size
-            minWidth: "180px"
+            // TODO: Adjust width based on screen size (is 150 enough?)
+            minWidth: "180px",
+            [theme.breakpoints.down("sm")]: {
+              minWidth: "150px",
+            },
           },
           "& .MuiInputLabel-root": {
             color: "#FFFFFF",
@@ -45,7 +46,7 @@ const updatedTheme = createTheme(theme, {
           "& .MuiInput-underline:after": {
             borderBottomColor: "#FFFFFF",
           },
-        },
+        }),
       },
     },
   },
@@ -54,13 +55,14 @@ const updatedTheme = createTheme(theme, {
     fontWeightLight: 400,
     h1: {
       fontSize: '64px',
-      '@media (max-width:600px)': {
+      [baseTheme.breakpoints.down("sm")]: {
         fontSize: '36px',
       },
     },
     h2: {
       fontSize: '60px',
-      [theme.breakpoints.down('sm')]: {
+      fontWeight: 500,
+      [baseTheme.breakpoints.down("sm")]: {
         fontSize: '24px',
       },
     },
@@ -72,17 +74,14 @@ const updatedTheme = createTheme(theme, {
     },
     body1: {
       fontSize: '20px',
-      [theme.breakpoints.down('sm')]: {
+      [baseTheme.breakpoints.down("sm")]: {
         fontSize: '18px',
       },
     },
     body2: {
       fontSize: '16px',
     },
-    body3: {
-      fontSize: '14px',
-    }
   }
 });
 
-export default updatedTheme;
+export default theme;

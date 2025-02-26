@@ -34,24 +34,24 @@ const MainText = () => {
   return (
     <Box>
       <Box display="flex" alignItems="center" justifyContent="center">
-        <Typography ref={beforeArrowTextRef} variant="h2" className={styles.headlineText}>
+        <Typography ref={beforeArrowTextRef} variant="h2">
           We
         </Typography>
         <img alt='Arrow' src={arrow} ref={arrowRef} className={styles.headlineArrow} />
-        <Typography ref={afterArrowTextRef} variant="h2" className={styles.headlineText}>
+        <Typography ref={afterArrowTextRef} variant="h2">
           boost brands
         </Typography>
       </Box>
       <Box display="flex" alignItems="baseline" justifyContent="center">
-        <Typography variant="h2" className={styles.headlineText}>
+        <Typography variant="h2">
           with creativity&nbsp;
         </Typography>
         <img ref={asteriskRef} alt="Asterisk" src={asterisk} className={styles.headlineAsterisk} />
       </Box>
       <Box display="flex" justifyContent="center">
-        <Typography variant="h2" className={styles.headlineText}>and&nbsp;</Typography>
+        <Typography variant="h2">and&nbsp;</Typography>
         <Box display="flex" flexDirection="column" gap={1}>
-          <Typography variant="h2" className={styles.headlineDarkerText}>
+          <Typography variant="h2" noWrap className={styles.headlineDarkerText}>
             digital solutions
           </Typography>
           <Box height="2px"

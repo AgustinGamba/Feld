@@ -1,24 +1,20 @@
-.headlineText {
-    font-weight: 500;
-    text-wrap: nowrap;
-}
-
 .headlineDarkerText {
-    font-weight: 600;
-    text-wrap: nowrap;
+  /* TODO: Can I remove the important? I need to reorder the theme css so its on the bottom of the styles */
+  font-weight: 600 !important;
+  overflow: visible !important;
 }
 
 .headlineArrow {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 .headlineAsterisk {
-    height: 35px;
-    width: 35px;
+  height: 35px;
+  width: 35px;
 }
 
 .headlineTextUnderline {
-    background-color: #0B56DB;
-    opacity: 0;
+  background-color: #0B56DB;
+  opacity: 0;
 }

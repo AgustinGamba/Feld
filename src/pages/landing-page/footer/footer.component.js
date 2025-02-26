@@ -16,7 +16,7 @@ function Footer() {
           <Box display="flex" flexDirection="column" alignItems="stretch">
             <Box display="flex" flexDirection="column" alignItems="flex-start" gap={1}>
               <img alt='Feld Logo' className={styles.footerLogo} src={feldLogo} />
-              <Typography variant="body3">
+              <Typography variant="body2" fontSize={14}>
                 Copyright © 2024 FELD.
               </Typography>
             </Box>
