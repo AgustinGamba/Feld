@@ -13,6 +13,14 @@ function FeldAccordion({ service, position, onClick, expanded, onMouseEnter, onM
         className={styles.accordionContainer}
         onClick={onClick}
         expanded={expanded}
+        sx={{
+          // TODO: Move to stylesheet
+          backgroundColor: "transparent",
+          "&::before": {
+            display: "none",
+          }
+        }
+        }
       >
         <AccordionSummary
           aria-controls={`accordion-${position}-content`}
@@ -26,7 +34,7 @@ function FeldAccordion({ service, position, onClick, expanded, onMouseEnter, onM
             },
             "& .MuiAccordionSummary-content.Mui-expanded": {
               margin: "20px 10px"
-            }
+            },
           }}
         >
           <Box display="flex" gap={1} alignItems="center">
@@ -49,7 +57,7 @@ function FeldAccordion({ service, position, onClick, expanded, onMouseEnter, onM
           </Typography>
         </AccordionDetails>
       </Accordion >
-    </Box>
+    </Box >
   )
 }
 
