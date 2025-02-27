@@ -14,3 +14,5 @@ Replace px with correct values
 Remove unused css classes
 
 Add design system values
+
+Should I remove all the sx created for responsiveness and use something better?

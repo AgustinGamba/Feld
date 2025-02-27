@@ -6,12 +6,15 @@ import theme from './theme';
 import App from './app.component';
 import './index.module.css';
 import reportWebVitals from './reportWebVitals';
+import { BreakpointProvider } from "./components/breakpoint-provider/breakpointProvider.component";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <BreakpointProvider>
+        <App />
+      </BreakpointProvider>
     </ThemeProvider>
   </React.StrictMode>
 );
