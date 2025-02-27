@@ -2,11 +2,14 @@ import { Container, Box, Typography, Link } from '@mui/material';
 import { NorthEast } from '@mui/icons-material';
 import React, { useState } from "react";
 
-import Accordion from "./accordion/accordion.component"
+import { useBreakpoint } from "../../../components/breakpoint-provider/breakpointProvider.component";
+import Accordion from "./accordion/accordion.component";
 import styles from './services.module.css';
 import Carousel from './carousel/carousel.component';
 
 function Services() {
+  const { currentBreakpoint } = useBreakpoint();
+
   // TODO: Remove placeholder, add real data
   const services = [{
     name: "Graphic Design", description: "We bring your ideas to life. A well-crafted design can transform your brand's perception, enhance its image, and create a lasting impact in the market."
@@ -26,7 +29,13 @@ function Services() {
       <Container className={styles.servicesBackgroundImage} >
         <Box paddingLeft="10%" >
           <Box display="flex" flexDirection="column" gap={10} >
-            <Box display="flex" flexDirection="row" >
+            <Box
+              display="flex"
+              sx={{
+                flexDirection: currentBreakpoint === "xs" ? "column" : "row",
+                gap: currentBreakpoint === "xs" ? 3 : 0,
+              }}
+            >
               <Box display="flex" flexDirection="column" width='40%' gap={5}>
                 <Box display="flex" flexDirection="row" >
                   <Typography variant="h1">
@@ -36,7 +45,11 @@ function Services() {
                     .
                   </Typography>
                 </Box>
-                <Box display="flex" flexDirection="column" gap={10}>
+                <Box display="flex" flexDirection="column" gap={10}
+                  sx={{
+                    display: currentBreakpoint === "xs" ? "none" : "flex",
+                  }}
+                >
                   <Container>
                     <Typography variant="body2" className={styles.servicesDescriptionText}>
                       We create digital solutions that inspire and grow with you. By blending creativity with tech,
@@ -53,7 +66,10 @@ function Services() {
                   </Box>
                 </Box>
               </Box>
-              <Box paddingLeft="5%">
+              <Box
+                sx={{
+                  paddingLeft: currentBreakpoint === "xs" ? "0%" : "5%",
+                }}>
                 <Box display="flex" flexDirection="row" flexWrap="wrap" gap={3}>
                   {services.map((service, index) => (
                     <Accordion
