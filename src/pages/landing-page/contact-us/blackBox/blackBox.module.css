@@ -1,6 +1,6 @@
 .blackBoxContainer {
   /* TODO: Check, it doesnt resize, but prolly this should be the same as bluebox after resizing */
-  height: 25rem;
+  min-height: 25rem;
   background-color: #000000;
   align-content: center;
 }

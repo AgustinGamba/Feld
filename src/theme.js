@@ -68,6 +68,9 @@ const theme = createTheme({
     },
     h3: {
       fontSize: '56px',
+      [baseTheme.breakpoints.down("sm")]: {
+        fontSize: '42px',
+      },
     },
     h4: {
       fontSize: '36px',

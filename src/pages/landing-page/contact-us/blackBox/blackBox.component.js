@@ -2,13 +2,21 @@ import { Box, Typography } from '@mui/material';
 
 import letsTalk from '../../../../assets/letsTalk.svg';
 import PaddedContainer from '../../../../components/padded-container/paddedContainer.component';
+import { useBreakpoint } from "../../../../components/breakpoint-provider/breakpointProvider.component";
 
 import styles from './blackBox.module.css';
 
 function BlackBox() {
+  const { isSmallerThanOrEqual } = useBreakpoint();
+
   return (
     <PaddedContainer className={styles.blackBoxContainer}>
-      <Box display="flex" flexDirection="row" alignItems="center">
+      <Box display="flex" alignItems="center"
+        sx={{
+          padding: isSmallerThanOrEqual("sm") ? "150px 0" : 0,
+          flexDirection: isSmallerThanOrEqual("sm") ? "column" : "row",
+          gap: isSmallerThanOrEqual("sm") ? 5 : 0,
+        }}>
         <Box display="flex" justifyContent="center" className={styles.blackBoxHalfContainer}>
           <img alt='Lets talk' src={letsTalk} />
         </Box>
