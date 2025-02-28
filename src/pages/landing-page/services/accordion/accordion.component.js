@@ -35,11 +35,13 @@ function FeldAccordion({ service, position, onClick, expanded, onMouseEnter, onM
             },
           }}
         >
-          <Box display="flex" gap={1} alignItems="center">
-            <Pill position={position} />
-            <Typography variant='body1' >
-              {service.name}
-            </Typography>
+          <Box display="flex" gap={1} alignItems="center" justifyContent="space-between" width="100%">
+            <Box display="flex" gap={1} alignItems="center">
+              <Pill position={position} />
+              <Typography variant='body1' >
+                {service.name}
+              </Typography>
+            </Box>
             <NorthEast
               sx={{
                 // TODO: Move to stylesheet
