@@ -8,7 +8,7 @@ import styles from './services.module.css';
 import Carousel from './carousel/carousel.component';
 
 function Services() {
-  const { currentBreakpoint } = useBreakpoint();
+  const { isGreaterThanOrEqual, isSmallerThanOrEqual } = useBreakpoint();
 
   // TODO: Remove placeholder, add real data
   const services = [{
@@ -27,16 +27,19 @@ function Services() {
   return (
     <Container className={styles.servicesContainer} >
       <Container className={styles.servicesBackgroundImage} >
-        <Box paddingLeft="10%" >
-          <Box display="flex" flexDirection="column" gap={10} >
+        <Box >
+          <Box display="flex" flexDirection="column"
+            sx={{
+              gap: isGreaterThanOrEqual("sm") ? 0 : 10
+            }} >
             <Box
               display="flex"
               sx={{
-                flexDirection: currentBreakpoint === "xs" ? "column" : "row",
-                gap: currentBreakpoint === "xs" ? 3 : 0,
+                flexDirection: isSmallerThanOrEqual("sm") ? "column" : "row",
+                gap: isSmallerThanOrEqual("sm") ? 3 : 0,
               }}
             >
-              <Box display="flex" flexDirection="column" width='40%' gap={5}>
+              <Box display="flex" flexDirection="column" width='40%' gap={5} paddingLeft="10%">
                 <Box display="flex" flexDirection="row" >
                   <Typography variant="h1">
                     Services
@@ -47,7 +50,7 @@ function Services() {
                 </Box>
                 <Box display="flex" flexDirection="column" gap={10}
                   sx={{
-                    display: currentBreakpoint === "xs" ? "none" : "flex",
+                    display: isSmallerThanOrEqual("sm") ? "none" : "flex",
                   }}
                 >
                   <Container>
@@ -66,11 +69,8 @@ function Services() {
                   </Box>
                 </Box>
               </Box>
-              <Box
-                sx={{
-                  paddingLeft: currentBreakpoint === "xs" ? "0%" : "5%",
-                }}>
-                <Box display="flex" flexDirection="row" flexWrap="wrap" gap={3}>
+              <Box>
+                <Box display="flex" flexDirection="row" flexWrap="wrap" gap={3} justifyContent="center">
                   {services.map((service, index) => (
                     <Accordion
                       key={index + 1}
@@ -90,8 +90,12 @@ function Services() {
                 </Box>
               </Box>
             </Box>
-            <Box display="flex" flexDirection="row" marginTop={5} gap={5}>
-              <Box display="flex" flexDirection="row" >
+            <Box display="flex" gap={5} paddingLeft="10%"
+              sx={{
+                marginTop: isSmallerThanOrEqual("xs") ? 0 : 5,
+                flexDirection: isSmallerThanOrEqual("sm") ? "column" : "row",
+              }}>
+              <Box display="flex" flexDirection="row">
                 <Typography variant="h4">
                   Clients
                 </Typography>

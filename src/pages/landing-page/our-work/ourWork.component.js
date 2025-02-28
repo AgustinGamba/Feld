@@ -35,8 +35,9 @@ function OurWork() {
   return (
     <Container ref={scrollContainerRef} className={styles.ourWorkContainer}>
       <PaddedContainer>
-        <Box display="flex" flexDirection="row" marginTop={5} marginBottom={5} >
+        <Box display="flex" flexDirection="row" marginTop={5} marginBottom={5}>
           <Typography variant="h1">
+            {/* In mobile should be shown when scrolling */}
             Our Work
           </Typography>
           <Typography variant="h1" className={styles.ourWorkDot}>
@@ -44,7 +45,7 @@ function OurWork() {
           </Typography>
         </Box>
       </PaddedContainer>
-      <Box ref={scrollContentRef}>
+      <Box>
         <HorizontalScroll scrollContentRef={scrollContentRef} />
       </Box>
     </Container>

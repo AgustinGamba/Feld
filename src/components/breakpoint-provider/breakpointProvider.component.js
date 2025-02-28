@@ -3,6 +3,8 @@ import { useMediaQuery, useTheme } from "@mui/material";
 
 const BreakpointContext = createContext();
 
+const breakpointOrder = { xs: 0, sm: 1, md: 2, lg: 3, xl: 4 };
+
 export function BreakpointProvider({ children }) {
   const theme = useTheme();
 
@@ -29,5 +31,20 @@ export function BreakpointProvider({ children }) {
 }
 
 export function useBreakpoint() {
-  return useContext(BreakpointContext);
+  const context = useContext(BreakpointContext);
+  if (!context) {
+    throw new Error("useBreakpoint must be used within a BreakpointProvider");
+  }
+
+  return {
+    ...context,
+    isSmallerThan: (breakpoint) =>
+      breakpointOrder[context.currentBreakpoint] < breakpointOrder[breakpoint],
+    isSmallerThanOrEqual: (breakpoint) =>
+      breakpointOrder[context.currentBreakpoint] <= breakpointOrder[breakpoint],
+    isGreaterThan: (breakpoint) =>
+      breakpointOrder[context.currentBreakpoint] > breakpointOrder[breakpoint],
+    isGreaterThanOrEqual: (breakpoint) =>
+      breakpointOrder[context.currentBreakpoint] >= breakpointOrder[breakpoint],
+  };
 }
