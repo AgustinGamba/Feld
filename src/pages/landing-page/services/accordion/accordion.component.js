@@ -2,10 +2,13 @@ import { Typography, Accordion, AccordionSummary, AccordionDetails, Box } from '
 import { NorthEast } from '@mui/icons-material';
 
 import Pill from "../pill/pill.component"
+import { useBreakpoint } from "../../../../components/breakpoint-provider/breakpointProvider.component";
 
 import styles from './accordion.module.css';
 
 function FeldAccordion({ service, position, onClick, expanded, onMouseEnter, onMouseLeave }) {
+  const { isSmallerThanOrEqual } = useBreakpoint();
+
   return (
     <Box onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <Accordion
@@ -13,6 +16,9 @@ function FeldAccordion({ service, position, onClick, expanded, onMouseEnter, onM
         className={styles.accordionContainer}
         onClick={onClick}
         expanded={expanded}
+        sx={{
+          maxWidth: isSmallerThanOrEqual("sm") ? "100%" : "328px"
+        }}
       >
         <AccordionSummary
           aria-controls={`accordion-${position}-content`}

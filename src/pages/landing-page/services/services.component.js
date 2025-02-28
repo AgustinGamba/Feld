@@ -70,7 +70,11 @@ function Services() {
                 </Box>
               </Box>
               <Box>
-                <Box display="flex" flexDirection="row" flexWrap="wrap" gap={3} justifyContent="center">
+                <Box display="flex" flexDirection="row" flexWrap="wrap" gap={3} justifyContent="center"
+                  sx={{
+                    marginLeft: isSmallerThanOrEqual("sm") ? 10 : 0,
+                    marginRight: isSmallerThanOrEqual("sm") ? 10 : 0,
+                  }}>
                   {services.map((service, index) => (
                     <Accordion
                       key={index + 1}
