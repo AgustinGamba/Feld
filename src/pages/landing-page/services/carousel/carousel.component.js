@@ -5,15 +5,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import clientPlaceholder from "../../../../assets/clientPlaceholder.svg"
+import { useBreakpoint } from "../../../../components/breakpoint-provider/breakpointProvider.component";
+
 
 // TODO: Remove placeholder, add real data
 const clients = [clientPlaceholder, clientPlaceholder, clientPlaceholder, clientPlaceholder];
 
 function FeldCarousel() {
+  const { isSmallerThanOrEqual } = useBreakpoint();
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: isSmallerThanOrEqual("sm") ? 3 : 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
