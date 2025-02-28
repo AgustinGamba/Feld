@@ -13,14 +13,6 @@ function FeldAccordion({ service, position, onClick, expanded, onMouseEnter, onM
         className={styles.accordionContainer}
         onClick={onClick}
         expanded={expanded}
-        sx={{
-          // TODO: Move to stylesheet
-          backgroundColor: "transparent",
-          "&::before": {
-            display: "none",
-          }
-        }
-        }
       >
         <AccordionSummary
           aria-controls={`accordion-${position}-content`}

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from '@mui/material';
+import { StyledEngineProvider } from '@mui/material/styles';
 
 import theme from './theme';
 import App from './app.component';
@@ -10,13 +11,16 @@ import { BreakpointProvider } from "./components/breakpoint-provider/breakpointP
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <BreakpointProvider>
-        <App />
-      </BreakpointProvider>
-    </ThemeProvider>
-  </React.StrictMode>
+  <StyledEngineProvider injectFirst>
+    <React.StrictMode>
+      <ThemeProvider theme={theme}>
+        <BreakpointProvider>
+          <App />
+        </BreakpointProvider>
+      </ThemeProvider>
+    </React.StrictMode>
+  </StyledEngineProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
