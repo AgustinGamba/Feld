@@ -1,6 +1,6 @@
 .blueBoxContainer {
   /* TODO: Check, vh doesn't adapt to content position */
-  height: 25rem;
+  min-height: 25rem;
   background-color: #0B56DB;
   align-content: center;
 }
