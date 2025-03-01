@@ -4,16 +4,6 @@
   overflow: visible !important;
 }
 
-.headlineArrow {
-  height: 40px;
-  width: 40px;
-}
-
-.headlineAsterisk {
-  height: 35px;
-  width: 35px;
-}
-
 .headlineTextUnderline {
   background-color: #0B56DB;
   opacity: 0;

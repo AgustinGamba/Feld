@@ -5,17 +5,19 @@ import { Box, Typography } from "@mui/material";
 
 import arrow from "../../../../assets/arrow.svg";
 import asterisk from "../../../../assets/asterisk.svg";
+import { useBreakpoint } from "../../../../components/breakpoint-provider/breakpointProvider.component";
 
 import styles from "./headline.module.css";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const MainText = () => {
+  gsap.registerPlugin(ScrollTrigger);
   const beforeArrowTextRef = useRef(null);
   const arrowRef = useRef(null);
   const afterArrowTextRef = useRef(null);
   const asteriskRef = useRef(null);
   const underlineRef = useRef(null);
+  const { isSmallerThanOrEqual } = useBreakpoint();
+
 
   useEffect(() => {
     const animation = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 1 });
@@ -24,7 +26,7 @@ const MainText = () => {
       [arrowRef.current, asteriskRef.current, underlineRef.current],
       { opacity: 0, scale: 0.5, scaleX: 0 }
     )
-      .fromTo(afterArrowTextRef.current, { x: -25 }, { x: 20, duration: 0.5, ease: "power2.out" }, 0)
+      .fromTo(afterArrowTextRef.current, { x: isSmallerThanOrEqual("xs") ? -10 : -25 }, { x: 20, duration: 0.5, ease: "power2.out" }, 0)
       .to(arrowRef.current, { x: 10, opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, "-=0.3")
       .to(
         asteriskRef.current,
@@ -45,7 +47,13 @@ const MainText = () => {
         <Typography ref={beforeArrowTextRef} variant="h2">
           We
         </Typography>
-        <img alt='Arrow' src={arrow} ref={arrowRef} className={styles.headlineArrow} />
+        <Box display="flex" justifyContent="center"
+          sx={{
+            height: isSmallerThanOrEqual("xs") ? "20px" : "30px",
+            width: isSmallerThanOrEqual("xs") ? "20px" : "40px",
+          }}>
+          <img alt='Arrow' src={arrow} ref={arrowRef} />
+        </Box>
         <Typography ref={afterArrowTextRef} variant="h2">
           boost brands
         </Typography>
@@ -54,7 +62,12 @@ const MainText = () => {
         <Typography variant="h2">
           with creativity&nbsp;
         </Typography>
-        <img ref={asteriskRef} alt="Asterisk" src={asterisk} className={styles.headlineAsterisk} />
+        <Box sx={{
+          height: isSmallerThanOrEqual("xs") ? "25px" : "35px",
+          width: isSmallerThanOrEqual("xs") ? "25px" : "35px",
+        }}>
+          <img ref={asteriskRef} alt="Asterisk" src={asterisk} height="100%" />
+        </Box>
       </Box>
       <Box display="flex" justifyContent="center">
         <Typography variant="h2">and&nbsp;</Typography>
