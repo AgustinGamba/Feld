@@ -63,7 +63,7 @@ const theme = createTheme({
       fontSize: '60px',
       fontWeight: 500,
       [baseTheme.breakpoints.down("sm")]: {
-        fontSize: '24px',
+        fontSize: '34px',
       },
     },
     h3: {

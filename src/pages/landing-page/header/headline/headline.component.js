@@ -62,7 +62,7 @@ const MainText = () => {
           <Typography variant="h2" noWrap className={styles.headlineDarkerText}>
             digital solutions
           </Typography>
-          <Box height="2px"
+          <Box height="4px"
             ref={underlineRef}
             className={styles.headlineTextUnderline}
           />
